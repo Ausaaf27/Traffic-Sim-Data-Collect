@@ -1,0 +1,23 @@
+<input type="text" placeholder="Search Vehicles" class="form-control" ng-model="IntersectionVm.searchText">
+<br/>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+     
+        <th> Intersection ID</th>
+      <th>Location(x,y,x)</th>
+      <th>Max speed</th>
+         <th>Num of vehicles passed</th>
+         <th> Session ID </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in IntersectionVm.cars | filter: IntersectionVm.searchText ">
+      <td>{{car.ID}}</a></td>
+      <td>({{car.LocationX}}; {{car.LocationY}}; {{car.LocationZ}})</td>
+      <td>{{car.maxspeed}}</td>
+      <td>{{car.numofvehiclespassed}}</td>
+      <td>{{car.session}}</td>
+    </tr>
+  </tbody>
+</table>

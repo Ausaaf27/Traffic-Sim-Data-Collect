@@ -1,0 +1,23 @@
+<input type="text" placeholder="Search Vehicles" class="form-control" ng-model="VehicleVm.searchText">
+<br/>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+     
+        <th>Vehicle ID</th>
+      <th>Location(x,y,x)</th>
+      <th>Current speed</th>
+         <th>Time since sim start</th>
+         <th> Session ID </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in VehicleVm.cars | filter: VehicleVm.searchText ">
+      <td>{{car.VehicleID}}</a></td>
+      <td>({{car.LocationX}}; {{car.LocationY}}; {{car.LocationZ}})</td>
+      <td>{{car.CurrentSpeed}}</td>
+      <td>{{car.CTime}}</td>
+      <td>{{car.session}}</td>
+    </tr>
+  </tbody>
+</table>

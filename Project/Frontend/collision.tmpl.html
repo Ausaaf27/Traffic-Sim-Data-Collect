@@ -1,0 +1,27 @@
+<input type="text" placeholder="Search Vehicles" class="form-control" ng-model="CollisionsVm.searchText">
+<br/>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+     
+        <th> ID</th>
+      <th>Location(x,y,x)</th>
+      <th>Primary Vehicle ID</th>
+         <th>Secondary Vehicle ID</th>
+                  <th> Time Stopped </th>
+
+         <th> Session ID </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in CollisionsVm.cars | filter: CollisionsVm.searchText ">
+      <td>{{car.Id}}</a></td>
+      <td>({{car.LocationX}}; {{car.LocationY}}; {{car.LocationZ}})</td>
+      <td>{{car.pvId}}</td>
+      <td>{{car.svId}}</td>
+            <td>{{car.timestopped}}</td>
+
+      <td>{{car.session}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app='myModule'>
+
+<head>
+  <meta charset="utf-8" />
+  <title> AngularJs Plukner</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style1.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      Traffic sim Data
+    </header>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link " href="#!/vehicles">Vehicle-Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/intersection">Intersection-Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/ttnpoint">Time to Next Intersection</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/collisions">Collison-Data</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="http://dcm.uhcl.edu/capf19g1">Back To Project website</a>
+      </li>
+    </ul>
+    <div ng-view></div>
+
+    <footer>
+     AtLink Traffic Sim.
+    </footer>
+  </div>
+  <div></div>
+
+  <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+  <script src="app.module.js"></script>
+  <script src="vehicles.service.js"></script>
+  <script src="vehicles.controller.js"></script>
+  <script src="Intersections.controller.js"></script>
+  <script src="ttn.controller.js"></script>
+  <script src="collision.controller.js"></script>
+  
+
+
+</body>
+
+</html>

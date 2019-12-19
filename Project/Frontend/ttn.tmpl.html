@@ -1,0 +1,21 @@
+<input type="text" placeholder="Search Vehicles" class="form-control" ng-model="TtnVm.searchText">
+<br/>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+     
+        <th>Current Intersection ID</th>
+      <th>Next Intersection ID</th>
+      <th>Time to Reach</th>
+         <th>Session</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in TtnVm.cars | filter: TtnVm.searchText ">
+      <td>{{car.CIntersectionID}}</a></td>
+      <td>{{car.NIntersectionID}}</td>
+      <td>{{car.TTreach}}</td>
+      <td>{{car.session}}</td>
+    </tr>
+  </tbody>
+</table>

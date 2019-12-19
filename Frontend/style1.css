@@ -1,0 +1,23 @@
+/* Styles go here */
+
+div.container{
+  width:100%;
+  border :1 px solid gray;
+}
+header,footer{
+ padding: 1em;
+  background: #004d99;
+  Color: white;
+  text-align: center;
+  clear: left;
+}
+.detailsview{
+  width:75%;
+  height:75%;
+  border: 1px solid gray;
+  box-shadow:4px 4px 4px gray;
+  margin:20px;
+  padding:10px;
+  border-radius:2px;
+  text-align:center;
+}
